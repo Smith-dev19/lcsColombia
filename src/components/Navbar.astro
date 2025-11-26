@@ -1,0 +1,443 @@
+---
+// Navbar Component para Empresa de Préstamo de Tecnologías
+---
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path
+                    d="M2 17L12 22L22 17"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path
+                    d="M2 12L12 17L22 12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+            <span class="logo-text">
+                <span class="logo-primary">LCS</span>
+                <span class="logo-secondary">Colombia</span>
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+            <a href="/" class="nav-link">Inicio</a>
+            <a href="/services" class="nav-link">Servicios</a>
+            <a href="/catalogo" class="nav-link">Catálogo</a>
+            <a href="/about" class="nav-link">Nosotros</a>
+            <a href="/contacto" class="nav-link">Contacto</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="nav-actions">
+            <a href="/cotizar" class="btn-primary">
+                <span>Cotizar Ahora</span>
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+                    <path
+                        fill-rule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="/" class="mobile-link">Inicio</a>
+        <a href="/servicios" class="mobile-link">Servicios</a>
+        <a href="/catalogo" class="mobile-link">Catálogo</a>
+        <a href="/about" class="mobile-link">Nosotros</a>
+        <a href="/contacto" class="mobile-link">Contacto</a>
+        <a href="/cotizar" class="mobile-cta">Cotizar Ahora</a>
+    </div>
+</nav>
+
+<style>
+    /* Variables CSS */
+    :root {
+        --primary-gradient: linear-gradient(135deg, rgb(41,128,185) 0%, rgb(52,152,219) 100%);
+        --secondary-gradient: linear-gradient(135deg, rgb(84,182,227) 0%, rgb(41,128,185) 100%);
+        --dark-bg: #0f0f23;
+        --glass-bg: rgba(15, 15, 35, 0.85);
+        --text-primary: #ffffff;
+        --text-secondary: #a0aec0;
+        --accent-color: rgb(41,128,185);
+        --accent-hover: rgb(52,152,219);
+    }
+
+    /* Navbar Principal */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(41, 128, 185, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navbar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--primary-gradient);
+        opacity: 0.5;
+    }
+
+    .navbar-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: translateY(-2px);
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        color: var(--accent-color);
+        filter: drop-shadow(0 0 8px rgba(41, 128, 185, 0.5));
+        transition: all 0.3s ease;
+    }
+
+    .logo:hover .logo-icon {
+        color: var(--accent-hover);
+        filter: drop-shadow(0 0 12px rgba(52, 152, 219, 0.7));
+    }
+
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .logo-primary {
+        font-size: 1.5rem;
+        font-weight: 800;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -0.5px;
+    }
+
+    .logo-secondary {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    /* Navigation Links */
+    .nav-links {
+        display: none;
+        gap: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .nav-links {
+            display: flex;
+        }
+    }
+
+    .nav-link {
+        position: relative;
+        padding: 0.75rem 1.25rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 60%;
+        height: 2px;
+        background: var(--primary-gradient);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--text-primary);
+        background: rgba(41, 128, 185, 0.1);
+    }
+
+    .nav-link:hover::before {
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    /* Actions */
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-primary {
+        display: none;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: var(--primary-gradient);
+        color: var(--text-primary);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(84, 182, 227, 0.4);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+        .btn-primary {
+            display: flex;
+        }
+    }
+
+    .btn-primary::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+        );
+        transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+        left: 100%;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(41, 128, 185, 0.6);
+    }
+
+    .btn-icon {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-primary:hover .btn-icon {
+        transform: translateX(4px);
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+    }
+
+    @media (min-width: 768px) {
+        .mobile-menu-btn {
+            display: none;
+        }
+    }
+
+    .hamburger {
+        width: 25px;
+        height: 2px;
+        background: var(--text-primary);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-btn:hover .hamburger {
+        background: var(--accent-color);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 2rem 2rem;
+        background: rgba(15, 15, 35, 0.95);
+        border-top: 1px solid rgba(41, 128, 185, 0.2);
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-link {
+        padding: 1rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-link:hover {
+        color: var(--text-primary);
+        background: rgba(41, 128, 185, 0.1);
+        transform: translateX(8px);
+    }
+
+    .mobile-cta {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--primary-gradient);
+        color: var(--text-primary);
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(84, 182, 227, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .mobile-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(41, 128, 185, 0.6);
+    }
+
+    /* Animaciones */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .navbar {
+        animation: slideDown 0.5s ease-out;
+    }
+</style>
+
+<style is:global>
+    /* Hamburger animations */
+    .hamburger.rotate-45 {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .hamburger.opacity-0 {
+        opacity: 0;
+    }
+
+    .hamburger.rotate-minus-45 {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+    /* Navbar scrolled state */
+    .navbar.scrolled {
+        background: rgba(15, 15, 35, 0.95);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Body padding for fixed navbar */
+    body {
+        padding-top: 80px;
+    }
+</style>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const hamburgers = document.querySelectorAll(".hamburger");
+
+    mobileMenuBtn?.addEventListener("click", () => {
+        mobileMenu?.classList.toggle("active");
+
+        // Animate hamburger to X
+        hamburgers[0]?.classList.toggle("rotate-45");
+        hamburgers[1]?.classList.toggle("opacity-0");
+        hamburgers[2]?.classList.toggle("rotate-minus-45");
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (
+            !mobileMenuBtn?.contains(e.target as Node) &&
+            !mobileMenu?.contains(e.target as Node)
+        ) {
+            mobileMenu?.classList.remove("active");
+        }
+    });
+
+    // Navbar scroll effect
+    let lastScroll = 0;
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            navbar?.classList.add("scrolled");
+        } else {
+            navbar?.classList.remove("scrolled");
+        }
+
+        lastScroll = currentScroll;
+    });
+</script>
