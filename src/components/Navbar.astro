@@ -6,26 +6,7 @@
     <div class="navbar-container">
         <!-- Logo -->
         <a href="/" class="logo">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M12 2L2 7L12 12L22 7L12 2Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-                <path
-                    d="M2 17L12 22L22 17"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-                <path
-                    d="M2 12L12 17L22 12"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"></path>
-            </svg>
+            <img src="/image/logo.png" alt="LCS Colombia Logo" class="logo-image" />
             <span class="logo-text">
                 <span class="logo-primary">LCS</span>
                 <span class="logo-secondary">Colombia</span>
@@ -114,7 +95,7 @@
     .navbar-container {
         max-width: 1280px;
         margin: 0 auto;
-        padding: 1rem 2rem;
+        padding: 0.25rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -134,17 +115,17 @@
         transform: translateY(-2px);
     }
 
-    .logo-icon {
-        width: 36px;
-        height: 36px;
-        color: var(--accent-color);
+    .logo-image {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
         filter: drop-shadow(0 0 8px rgba(41, 128, 185, 0.5));
         transition: all 0.3s ease;
     }
 
-    .logo:hover .logo-icon {
-        color: var(--accent-hover);
+    .logo:hover .logo-image {
         filter: drop-shadow(0 0 12px rgba(52, 152, 219, 0.7));
+        transform: scale(1.05);
     }
 
     .logo-text {

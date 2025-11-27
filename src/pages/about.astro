@@ -1,0 +1,679 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta
+            name="description"
+            content="Sobre LCS Colombia - Empresa líder en alquiler de equipos tecnológicos"
+        />
+        <title>Nosotros - LCS Colombia</title>
+    </head>
+    <body>
+        <Navbar />
+
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="hero-background">
+                <div class="gradient-overlay"></div>
+                <div class="animated-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            <div class="about-hero-content">
+                <h1 class="about-title">Sobre LCS Colombia</h1>
+                <p class="about-lead">
+                    Más de 10 años ofreciendo soluciones tecnológicas innovadoras para empresas de todos los tamaños
+                </p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Company Story -->
+                    <div class="content-section">
+                        <h2 class="section-title">Nuestra Historia</h2>
+                        <p class="section-text">
+                            LCS Colombia nació con la visión de democratizar el acceso a la tecnología empresarial. 
+                            Fundada en 2014, hemos ayudado a cientos de empresas a optimizar sus operaciones 
+                            mediante el alquiler de equipos de cómputo de alta calidad.
+                        </p>
+                        <p class="section-text">
+                            Nuestro compromiso es proporcionar soluciones tecnológicas confiables, flexibles 
+                            y cost-efectivas que permitan a las empresas centrarse en su core business 
+                            mientras nosotros nos encargamos de su infraestructura tecnológica.
+                        </p>
+                    </div>
+
+                    <!-- Mission & Vision -->
+                    <div class="content-section">
+                        <h2 class="section-title">Misión y Visión</h2>
+                        <div class="mission-vision-grid">
+                            <div class="mv-card">
+                                <div class="mv-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Misión</h3>
+                                <p>
+                                    Facilitar el acceso a tecnología de punta mediante servicios de alquiler 
+                                    flexibles y soporte técnico especializado.
+                                </p>
+                            </div>
+                            <div class="mv-card">
+                                <div class="mv-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                                    </svg>
+                                </div>
+                                <h3>Visión</h3>
+                                <p>
+                                    Ser la empresa líder en Colombia en soluciones tecnológicas empresariales, 
+                                    reconocida por nuestra innovación y excelencia en el servicio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="values-background">
+                <div class="gradient-overlay"></div>
+            </div>
+            <div class="container">
+                <h2 class="values-title">Nuestros Valores</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3>Confiabilidad</h3>
+                        <p>Equipos certificados y mantenimiento preventivo garantizan operaciones sin interrupciones.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3>Innovación</h3>
+                        <p>Tecnología de última generación para mantener tu empresa a la vanguardia.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13 5.197v1M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <h3>Servicio</h3>
+                        <p>Soporte técnico 24/7 y atención personalizada para cada cliente.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3>Flexibilidad</h3>
+                        <p>Planes de alquiler adaptables a las necesidades específicas de tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="team-title">Nuestro Equipo</h2>
+                <p class="team-subtitle">
+                    Profesionales especializados en tecnología empresarial
+                </p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="placeholder-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Carlos Mendoza</h3>
+                        <p class="member-role">Director General</p>
+                        <p class="member-description">
+                            +15 años de experiencia en tecnología empresarial y gestión de proyectos.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="placeholder-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Ana García</h3>
+                        <p class="member-role">Jefa de Operaciones</p>
+                        <p class="member-description">
+                            Especialista en logística y optimización de procesos operacionales.
+                        </p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <div class="placeholder-avatar">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3>Miguel Rodriguez</h3>
+                        <p class="member-role">Jefe Técnico</p>
+                        <p class="member-description">
+                            Ingeniero en sistemas con certificaciones en infraestructura empresarial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="stats-background">
+                <div class="gradient-overlay"></div>
+                <div class="animated-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Clientes Satisfechos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Tiempo de Actividad</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Soporte Técnico</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Footer 
+            title="¿Conoces más sobre nosotros?"
+            subtitle="Descubre cómo podemos ayudarte con nuestras soluciones tecnológicas"
+        />
+    </body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        background: #ffffff;
+        color: #1a202c;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* Hero Section */
+    .about-hero {
+        position: relative;
+        padding: 8rem 2rem 6rem;
+        background: linear-gradient(135deg, rgb(41,128,185) 0%, #0080ff 100%);
+        text-align: center;
+        overflow: hidden;
+        margin-top: 60px;
+    }
+
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .animated-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.3;
+        animation: float 20s infinite ease-in-out;
+    }
+
+    .shape-1 {
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(135deg, rgb(41,128,185), #0080ff);
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .shape-2 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(135deg, rgb(84,182,227), rgb(41,128,185));
+        bottom: 20%;
+        right: 15%;
+        animation-delay: 5s;
+    }
+
+    .shape-3 {
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(135deg, #0080ff, rgb(84,182,227));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-delay: 10s;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translate(0, 0) scale(1);
+        }
+        33% {
+            transform: translate(30px, -30px) scale(1.1);
+        }
+        66% {
+            transform: translate(-20px, 20px) scale(0.9);
+        }
+    }
+
+    .about-hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .about-title {
+        font-size: 4rem;
+        font-weight: 900;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        letter-spacing: -2px;
+    }
+
+    .about-lead {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+    }
+
+    /* About Content */
+    .about-content {
+        padding: 6rem 0;
+    }
+
+    .content-grid {
+        display: grid;
+        gap: 4rem;
+    }
+
+    .content-section {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .section-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #4a5568;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    /* Mission & Vision */
+    .mission-vision-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .mv-card {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        border: 1px solid #f1f5f9;
+    }
+
+    .mv-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.5rem;
+        color: rgb(41,128,185);
+    }
+
+    .mv-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
+    }
+
+    .mv-card p {
+        color: #4a5568;
+        line-height: 1.6;
+    }
+
+    /* Values Section */
+    .values-section {
+        position: relative;
+        background: #0f0f23;
+        padding: 6rem 0;
+        overflow: hidden;
+    }
+
+    .values-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .values-background .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+                circle at 30% 50%,
+                rgba(41, 128, 185, 0.15) 0%,
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at 70% 50%,
+                rgba(52, 152, 219, 0.15) 0%,
+                transparent 50%
+            );
+    }
+
+    .values-section .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .values-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .value-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .value-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 1.5rem;
+        color: rgb(41,128,185);
+    }
+
+    .value-card h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+
+    .value-card p {
+        color: #a0aec0;
+        line-height: 1.6;
+    }
+
+    /* Team Section */
+    .team-section {
+        padding: 6rem 0;
+        background: #f8fafc;
+    }
+
+    .team-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1a202c;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .team-subtitle {
+        font-size: 1.25rem;
+        color: #4a5568;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .team-member {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f5f9;
+    }
+
+    .member-image {
+        margin-bottom: 1.5rem;
+    }
+
+    .placeholder-avatar {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        background: rgb(41,128,185);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+    }
+
+    .placeholder-avatar svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .team-member h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-role {
+        font-size: 1rem;
+        color: rgb(41,128,185);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .member-description {
+        color: #4a5568;
+        line-height: 1.6;
+    }
+
+    /* Statistics Section */
+    .stats-section {
+        position: relative;
+        background: linear-gradient(135deg, rgb(41,128,185) 0%, #0080ff 100%);
+        padding: 6rem 0;
+        overflow: hidden;
+    }
+
+    .stats-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .stats-section .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .stat-card {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .values-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about-title {
+            font-size: 2.5rem;
+        }
+
+        .mission-vision-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .values-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .stats-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .values-title,
+        .team-title {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-hero {
+            padding: 6rem 2rem 4rem;
+        }
+
+        .about-content,
+        .values-section,
+        .team-section,
+        .stats-section {
+            padding: 4rem 0;
+        }
+    }
+</style>
