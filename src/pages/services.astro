@@ -48,7 +48,7 @@ import Footer from "../components/Footer.astro";
                 <h2 class="section-title-center">Nuestros Servicios</h2>
                 <p class="section-subtitle">Soluciones integrales en tecnología para empresas</p>
                 <div class="services-grid">
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon rental">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -58,11 +58,42 @@ import Footer from "../components/Footer.astro";
                         </div>
                         <h3 class="service-title">Alquiler de Equipos</h3>
                         <p class="service-description">
-                            Computadores, servidores y portátiles para proyectos temporales
+                            Computadores, servidores y portátiles de última generación para proyectos temporales con soporte técnico 24/7
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Equipos de alto rendimiento</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Soporte técnico incluido</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM9 9a1 1 0 112 0v4a1 1 0 11-2 0V9z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Entrega inmediata</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Desde $50.000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Solicitar Cotización</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon sales">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -72,23 +103,86 @@ import Footer from "../components/Footer.astro";
                         </div>
                         <h3 class="service-title">Venta de Equipos</h3>
                         <p class="service-description">
-                            Equipos de cómputo nuevos y reacondicionados para tu empresa
+                            Equipos de cómputo nuevos y reacondicionados de marcas reconocidas con garantía extendida
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Garantía hasta 3 años</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Financiación disponible</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Precios competitivos</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Consultar</span>
+                            <span class="period">precios</span>
+                        </div>
+                        <a href="/catalogo" class="service-btn">Ver Catálogo</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon maintenance">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3 class="service-title">Mantenimiento</h3>
+                        <h3 class="service-title">Mantenimiento Técnico</h3>
                         <p class="service-description">
-                            Mantenimiento preventivo y correctivo de equipos tecnológicos
+                            Mantenimiento preventivo y correctivo especializado para maximizar la vida útil de tus equipos
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Mantenimiento preventivo</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Reparaciones expertas</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Diagnóstico detallado</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">$35.000</span>
+                            <span class="period">/visita</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Agendar Servicio</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon recycling">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 19H6.5C5.11929 19 4 17.8807 4 16.5C4 15.1193 5.11929 14 6.5 14H7M7 19V14M7 19H8.5C9.88071 19 11 17.8807 11 16.5C11 15.1193 9.88071 14 8.5 14H7.5" stroke="currentColor" stroke-width="2"/>
@@ -97,11 +191,42 @@ import Footer from "../components/Footer.astro";
                         </div>
                         <h3 class="service-title">Reciclaje Tecnológico</h3>
                         <p class="service-description">
-                            Gestión ambiental responsable de equipos en desuso
+                            Gestión ambiental responsable de equipos obsoletos con certificación de destrucción de datos
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Proceso certificado</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Borrado seguro de datos</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Certificado de disposición</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Gratuito</span>
+                            <span class="period">evaluación</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Solicitar Recolección</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon marketing">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 19l9-7-9-7-9 7 9 7z" stroke="currentColor" stroke-width="2"/>
@@ -110,11 +235,43 @@ import Footer from "../components/Footer.astro";
                         </div>
                         <h3 class="service-title">Marketing Tecnológico</h3>
                         <p class="service-description">
-                            Estrategias de marketing especializado en equipos de cómputo
+                            Estrategias digitales especializadas en posicionamiento de productos tecnológicos
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+                                    </svg>
+                                </span>
+                                <span>Análisis de mercado</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Campañas dirigidas</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>ROI medible</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Personalizado</span>
+                            <span class="period">según proyecto</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Consultar Proyecto</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon supplies">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -122,13 +279,45 @@ import Footer from "../components/Footer.astro";
                                 <circle cx="18" cy="12" r="1" fill="currentColor"/>
                             </svg>
                         </div>
-                        <h3 class="service-title">Suministros</h3>
+                        <h3 class="service-title">Suministros Tecnológicos</h3>
                         <p class="service-description">
-                            Venta de tóner, software de impresión y suministros tecnológicos
+                            Tóners originales, software licenciado y accesorios tecnológicos de calidad premium
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Tóners originales</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Software licenciado</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                        <path d="M3 4a1 1 0 00-1 1v1a1 1 0 001 1h1l1.68 5.39A2.5 2.5 0 008.16 14h8.68a2.5 2.5 0 002.48-2.61L19.72 7H7.41l-.47-1.39A2.5 2.5 0 004.46 4H3z" />
+                                    </svg>
+                                </span>
+                                <span>Entrega programada</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Variable</span>
+                            <span class="period">según producto</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Ver Productos</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon data-security">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="3" y="11" width="18" height="10" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
@@ -138,11 +327,42 @@ import Footer from "../components/Footer.astro";
                         </div>
                         <h3 class="service-title">Seguridad de Datos</h3>
                         <p class="service-description">
-                            Borrado seguro de información y destrucción de discos duros
+                            Borrado seguro y destrucción certificada de discos duros con estándares internacionales
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Borrado certificado</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </span>
+                                <span>Estándares DOD 5220.22-M</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Certificado de destrucción</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">$25.000</span>
+                            <span class="period">/disco</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Solicitar Servicio</a>
                     </div>
 
-                    <div class="service-card main-service">
+                    <div class="service-card main-service" data-tilt>
                         <div class="service-icon donation">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
@@ -150,8 +370,212 @@ import Footer from "../components/Footer.astro";
                         </div>
                         <h3 class="service-title">Donación Tecnológica</h3>
                         <p class="service-description">
-                            Programas de donación de tecnología para instituciones educativas
+                            Programas de responsabilidad social donando tecnología a instituciones educativas necesitadas
                         </p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                    </svg>
+                                </span>
+                                <span>Instituciones educativas</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                <span>Impacto social</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">
+                                    <svg viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                </span>
+                                <span>Certificado de donación</span>
+                            </div>
+                        </div>
+                        <div class="service-pricing">
+                            <span class="price">Gratuito</span>
+                            <span class="period">evaluación</span>
+                        </div>
+                        <a href="/contacto" class="service-btn">Postular Institución</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">¿Por qué elegir LCS Colombia?</h2>
+                    <p class="section-description">
+                        Más de 18 años de experiencia nos respaldan como líderes en soluciones tecnológicas
+                    </p>
+                </div>
+                
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Experiencia Comprobada</h3>
+                        <p>18+ años en el mercado tecnológico colombiano, con más de 1000 proyectos exitosos</p>
+                        <div class="advantage-stats">
+                            <span class="stat-highlight">+1000</span>
+                            <span class="stat-text">Proyectos completados</span>
+                        </div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Calidad Garantizada</h3>
+                        <p>Todos nuestros equipos pasan por rigurosos controles de calidad antes de la entrega</p>
+                        <div class="advantage-stats">
+                            <span class="stat-highlight">99.8%</span>
+                            <span class="stat-text">Satisfacción cliente</span>
+                        </div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Respuesta Rápida</h3>
+                        <p>Soporte técnico 24/7 y tiempos de respuesta que no superan las 4 horas</p>
+                        <div class="advantage-stats">
+                            <span class="stat-highlight">&lt; 4h</span>
+                            <span class="stat-text">Tiempo respuesta</span>
+                        </div>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Precios Competitivos</h3>
+                        <p>Ofrecemos las mejores tarifas del mercado sin comprometer la calidad del servicio</p>
+                        <div class="advantage-stats">
+                            <span class="stat-highlight">30%</span>
+                            <span class="stat-text">Ahorro promedio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Process -->
+        <section class="services-process">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
+                    <p class="section-description">
+                        Un enfoque estructurado para garantizar el éxito de tu proyecto
+                    </p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>Consultoría Inicial</h3>
+                            <p>Analizamos tus necesidades específicas y diseñamos la solución ideal para tu empresa</p>
+                            <div class="step-features">
+                                <span>• Análisis de requerimientos</span>
+                                <span>• Propuesta personalizada</span>
+                                <span>• Cotización detallada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Preparación y Configuración</h3>
+                            <p>Preparamos y configuramos todos los equipos según tus especificaciones técnicas</p>
+                            <div class="step-features">
+                                <span>• Configuración personalizada</span>
+                                <span>• Instalación de software</span>
+                                <span>• Pruebas de funcionamiento</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Entrega e Implementación</h3>
+                            <p>Entregamos e implementamos la solución en tu ubicación con capacitación incluida</p>
+                            <div class="step-features">
+                                <span>• Entrega programada</span>
+                                <span>• Instalación profesional</span>
+                                <span>• Capacitación del equipo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Soporte Continuo</h3>
+                            <p>Brindamos soporte técnico permanente y mantenimiento preventivo durante todo el período</p>
+                            <div class="step-features">
+                                <span>• Soporte 24/7</span>
+                                <span>• Mantenimiento preventivo</span>
+                                <span>• Actualizaciones incluidas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="services-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">¿Listo para transformar tu negocio?</h2>
+                    <p class="cta-text">
+                        Descubre cómo nuestras soluciones tecnológicas pueden impulsar el crecimiento de tu empresa. 
+                        Obtén una cotización personalizada sin compromiso.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="/contacto" class="btn-cta-primary">Solicitar Cotización</a>
+                        <a href="/catalogo" class="btn-cta-secondary">Ver Catálogo</a>
+                    </div>
+                    <div class="cta-guarantee">
+                        <div class="guarantee-item">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Respuesta en 24h</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Sin compromiso</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>Cotización gratuita</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,6 +585,182 @@ import Footer from "../components/Footer.astro";
 
         <Footer 
         />
+
+        <script>
+            // Performance optimization - use passive event listeners
+            const supportsPassive = (() => {
+                let supports = false;
+                try {
+                    window.addEventListener('test', null, Object.defineProperty({}, 'passive', {
+                        get: function() { supports = true; }
+                    }));
+                } catch(e) {}
+                return supports;
+            })();
+
+            // Tilt Effect for Service Cards
+            document.addEventListener('DOMContentLoaded', function() {
+                const tiltElements = document.querySelectorAll('[data-tilt]');
+                
+                tiltElements.forEach(element => {
+                    let isAnimating = false;
+                    
+                    element.addEventListener('mouseenter', function() {
+                        this.style.transition = 'transform 0.08s ease-out';
+                    });
+
+                    element.addEventListener('mousemove', function(e) {
+                        if (isAnimating) return;
+                        
+                        isAnimating = true;
+                        requestAnimationFrame(() => {
+                            const rect = this.getBoundingClientRect();
+                            const x = e.clientX - rect.left;
+                            const y = e.clientY - rect.top;
+                            
+                            const centerX = rect.width / 2;
+                            const centerY = rect.height / 2;
+                            
+                            const rotateX = (y - centerY) / centerY * -6;
+                            const rotateY = (x - centerX) / centerX * 6;
+                            
+                            this.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(15px)`;
+                            isAnimating = false;
+                        });
+                    });
+
+                    element.addEventListener('mouseleave', function() {
+                        this.style.transition = 'transform 0.2s ease-out';
+                        this.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+                    });
+                });
+
+                // Intersection Observer for animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe service cards and process steps
+                const animatedElements = document.querySelectorAll('.service-card, .advantage-card, .process-step, .step-content');
+                animatedElements.forEach((el, index) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = `opacity 0.4s ease ${index * 0.05}s, transform 0.4s ease ${index * 0.05}s`;
+                    observer.observe(el);
+                });
+
+                // Counter animation for stats
+                const countElements = document.querySelectorAll('.stat-number, .stat-highlight');
+                const countObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const target = entry.target;
+                            const text = target.textContent;
+                            const number = parseFloat(text.replace(/[^\d.]/g, ''));
+                            
+                            if (!isNaN(number) && number > 0) {
+                                animateCounter(target, 0, number, text);
+                            }
+                            countObserver.unobserve(target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                countElements.forEach(el => {
+                    countObserver.observe(el);
+                });
+
+                function animateCounter(element, start, end, originalText) {
+                    const duration = 1200;
+                    const startTime = performance.now();
+                    
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                        
+                        const current = start + (end - start) * easeOutQuart;
+                        
+                        if (originalText.includes('%')) {
+                            element.textContent = Math.round(current) + '%';
+                        } else if (originalText.includes('+')) {
+                            element.textContent = Math.round(current) + '+';
+                        } else if (originalText.includes('<')) {
+                            element.textContent = '< ' + Math.round(current) + 'h';
+                        } else {
+                            element.textContent = Math.round(current);
+                        }
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            element.textContent = originalText;
+                        }
+                    }
+                    
+                    requestAnimationFrame(updateCounter);
+                }
+
+                // Optimized click animations for buttons
+                document.querySelectorAll('a[href^="/"], .service-btn').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        this.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 100);
+                    });
+                });
+
+                // Optimized parallax effect for hero background
+                const heroBackground = document.querySelector('.hero-background');
+                if (heroBackground) {
+                    let ticking = false;
+                    function updateParallax() {
+                        const scrolled = window.pageYOffset;
+                        const parallax = scrolled * 0.3;
+                        heroBackground.style.transform = `translate3d(0, ${parallax}px, 0)`;
+                        ticking = false;
+                    }
+                    
+                    window.addEventListener('scroll', () => {
+                        if (!ticking) {
+                            requestAnimationFrame(updateParallax);
+                            ticking = true;
+                        }
+                    });
+                }
+
+                // Service card hover effects enhancement
+                const serviceCards = document.querySelectorAll('.service-card');
+                serviceCards.forEach(card => {
+                    const serviceBtn = card.querySelector('.service-btn');
+                    
+                    card.addEventListener('mouseenter', () => {
+                        if (serviceBtn) {
+                            serviceBtn.style.transform = 'translateY(-2px)';
+                            serviceBtn.style.boxShadow = '0 8px 25px rgba(41, 128, 185, 0.4)';
+                        }
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        if (serviceBtn) {
+                            serviceBtn.style.transform = '';
+                            serviceBtn.style.boxShadow = '';
+                        }
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
 
@@ -169,6 +769,24 @@ import Footer from "../components/Footer.astro";
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Performance optimizations */
+    [data-tilt] {
+        will-change: transform;
+    }
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
     }
 
     body {
@@ -188,7 +806,7 @@ import Footer from "../components/Footer.astro";
     .services-hero {
         position: relative;
         padding: 8rem 2rem 6rem;
-        background: linear-gradient(135deg, rgb(41,128,185) 0%, #0080ff 100%);
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
         text-align: center;
         overflow: hidden;
     }
@@ -200,12 +818,12 @@ import Footer from "../components/Footer.astro";
         right: 0;
         bottom: 0;
         background: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23ffffff' fill-opacity='0.1'%3e%3ccircle cx='30' cy='30' r='2'/%3e%3c/g%3e%3c/svg%3e") repeat;
-        animation: float 20s ease-in-out infinite;
+        animation: float 8s ease-in-out infinite;
     }
 
     @keyframes float {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        50% { transform: translateY(-5px); }
     }
 
     .services-hero-content {
@@ -239,6 +857,11 @@ import Footer from "../components/Footer.astro";
 
     .stat-item {
         text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .stat-number {
@@ -259,7 +882,7 @@ import Footer from "../components/Footer.astro";
     /* Services Overview */
     .services-overview {
         padding: 6rem 0;
-        background: #f8fafc;
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     }
 
     .section-title-center {
@@ -268,6 +891,10 @@ import Footer from "../components/Footer.astro";
         text-align: center;
         color: #1a202c;
         margin-bottom: 1rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .section-subtitle {
@@ -282,7 +909,7 @@ import Footer from "../components/Footer.astro";
 
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
@@ -290,36 +917,59 @@ import Footer from "../components/Footer.astro";
 
     .service-card {
         background: #ffffff;
-        border-radius: 20px;
+        border-radius: 24px;
         padding: 2.5rem 2rem;
         text-align: center;
         border: 1px solid #e2e8f0;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        will-change: transform;
+        transform: translateZ(0);
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+        transform: scaleX(0);
+        transition: transform 0.25s ease;
+    }
+
+    .service-card:hover::before {
+        transform: scaleX(1);
     }
 
     .service-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border-color: rgb(41,128,185);
+        transform: translate3d(0, -8px, 0) scale(1.01);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        border-color: #3b82f6;
     }
 
     .service-icon {
         width: 80px;
         height: 80px;
         margin: 0 auto 1.5rem;
-        background: linear-gradient(135deg, rgb(41,128,185) 0%, #0080ff 100%);
-        border-radius: 16px;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #ffffff;
-        transition: transform 0.3s ease;
+        transition: transform 0.2s ease;
+        box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+        will-change: transform;
+        transform: translateZ(0);
     }
 
     .service-card:hover .service-icon {
-        transform: scale(1.1);
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 12px 35px rgba(41, 128, 185, 0.5);
     }
 
     .service-icon svg {
@@ -328,7 +978,7 @@ import Footer from "../components/Footer.astro";
     }
 
     .service-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 700;
         color: #1a202c;
         margin-bottom: 1rem;
@@ -337,19 +987,310 @@ import Footer from "../components/Footer.astro";
     .service-description {
         color: #64748b;
         line-height: 1.6;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+        margin: 1.5rem 0;
+        padding: 0;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+        color: #475569;
+    }
+
+    .feature-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        color: #3b82f6;
+        min-width: 20px;
+    }
+
+    .feature-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .service-pricing {
+        background: #f8fafc;
+        padding: 1rem;
+        border-radius: 12px;
+        margin: 1.5rem 0;
+        border: 1px solid #e2e8f0;
+    }
+
+    .price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #3b82f6;
+    }
+
+    .period {
+        font-size: 0.9rem;
+        color: #64748b;
+        margin-left: 0.5rem;
+    }
+
+    .service-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: transform 0.2s ease;
+        margin-top: auto;
+        will-change: transform;
+    }
+
+    .service-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: transform 0.2s ease;
+        margin-top: auto;
+        will-change: transform;
+    }
+
+    .service-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Why Choose Section */
+    .why-choose-section {
+        padding: 6rem 0;
+        background: #f8fafc;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
+    }
+
+    .section-description {
+        font-size: 1.2rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .advantages-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .advantage-card {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f5f9;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .advantage-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .advantage-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: #ffffff;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+    }
+
+    .advantage-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .advantage-card h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
+    }
+
+    .advantage-card p {
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .advantage-stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .stat-highlight {
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: #3b82f6;
+    }
+
+    .stat-text {
+        font-size: 0.9rem;
+        color: #64748b;
+    }
+
+    /* Process Section */
+    .services-process {
+        padding: 6rem 0;
+        background: #ffffff;
+    }
+
+    .process-timeline {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .process-timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #1e3a8a 0%, #3b82f6 100%);
+        transform: translateX(-50%);
+    }
+
+    .process-step {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    .process-step:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .step-number {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 900;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+    }
+
+    .step-content {
+        flex: 1;
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid #f1f5f9;
+        margin: 0 3rem;
+        max-width: 400px;
+    }
+
+    .process-step:nth-child(odd) .step-content {
+        margin-right: auto;
+        margin-left: 3rem;
+    }
+
+    .process-step:nth-child(even) .step-content {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+
+    .step-content h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
+    }
+
+    .step-content p {
+        color: #64748b;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .step-features {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .step-features span {
+        font-size: 0.9rem;
+        color: #475569;
     }
 
     /* CTA Section */
     .services-cta {
         padding: 6rem 0;
         background: linear-gradient(135deg, rgb(41,128,185) 0%, #0080ff 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .services-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23ffffff' fill-opacity='0.05'%3e%3ccircle cx='30' cy='30' r='2'/%3e%3c/g%3e%3c/svg%3e") repeat;
     }
 
     .cta-content {
         text-align: center;
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto;
+        position: relative;
+        z-index: 2;
     }
 
     .cta-title {
@@ -362,7 +1303,8 @@ import Footer from "../components/Footer.astro";
     .cta-text {
         font-size: 1.25rem;
         color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+        line-height: 1.6;
     }
 
     .cta-buttons {
@@ -370,6 +1312,7 @@ import Footer from "../components/Footer.astro";
         gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 3rem;
     }
 
     .btn-cta-primary,
@@ -379,17 +1322,19 @@ import Footer from "../components/Footer.astro";
         font-weight: 600;
         text-decoration: none;
         transition: all 0.3s ease;
+        font-size: 1.1rem;
     }
 
     .btn-cta-primary {
         background: #ffffff;
-        color: rgb(41,128,185);
+        color: #1e3a8a;
         border: 2px solid #ffffff;
     }
 
     .btn-cta-primary:hover {
         background: rgba(255, 255, 255, 0.9);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
     }
 
     .btn-cta-secondary {
@@ -402,19 +1347,64 @@ import Footer from "../components/Footer.astro";
     .btn-cta-secondary:hover {
         background: rgba(255, 255, 255, 0.2);
         border-color: rgba(255, 255, 255, 0.5);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
+    }
+
+    .cta-guarantee {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .guarantee-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+    }
+
+    .guarantee-item svg {
+        width: 20px;
+        height: 20px;
+        color: #ffffff;
     }
 
     /* Responsive */
     @media (max-width: 1024px) {
         .services-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .advantages-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .process-timeline::before {
+            display: none;
+        }
+
+        .process-step {
+            flex-direction: column !important;
+        }
+
+        .step-number {
+            position: relative;
+            left: auto;
+            transform: none;
+            margin-bottom: 1rem;
+        }
+
+        .step-content {
+            margin: 0 !important;
+            max-width: 100%;
         }
     }
 
     @media (max-width: 768px) {
         .services-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             gap: 1.5rem;
         }
 
@@ -422,24 +1412,37 @@ import Footer from "../components/Footer.astro";
             font-size: 2.5rem;
         }
 
-        .section-title-center {
-            font-size: 2.5rem;
+        .section-title-center,
+        .section-title {
+            font-size: 2rem;
         }
 
         .hero-stats {
-            gap: 2rem;
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            padding: 1rem;
         }
 
         .stat-number {
             font-size: 2rem;
         }
+
+        .service-card {
+            padding: 2rem 1.5rem;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+        }
+
+        .cta-text {
+            font-size: 1.1rem;
+        }
     }
 
     @media (max-width: 480px) {
-        .services-grid {
-            grid-template-columns: 1fr;
-        }
-
         .cta-buttons {
             flex-direction: column;
             align-items: center;
@@ -449,6 +1452,39 @@ import Footer from "../components/Footer.astro";
         .btn-cta-secondary {
             width: 100%;
             max-width: 300px;
+        }
+
+        .cta-guarantee {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-stats {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    /* Performance Optimizations */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Tilt Effect */
+    [data-tilt] {
+        transform-style: preserve-3d;
+        will-change: transform;
+    }
+
+    /* Reduce motion for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
         }
     }
 </style>
