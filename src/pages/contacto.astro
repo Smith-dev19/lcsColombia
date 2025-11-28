@@ -99,6 +99,37 @@ import ModernContactForm from "../components/ModernContactForm.astro";
                 </div>
             </div>
         </section>
+        <section>
+             <!-- Map Section -->
+        <div class="map-section">
+            <h2 class="map-title">Nuestra Ubicación</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.2089!2d-74.0575!3d4.6847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b0b0b0b0b0b%3A0x0!2sCarrera%2015%20%23%2077-05%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1234567890"
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación LCS Colombia">
+                </iframe>
+                <div class="map-info">
+                    <div class="map-address">
+                        <h3>Dirección</h3>
+                        <p>Carrera 15 # 77-05 Local 2-106</p>
+                        <p>Centro Comercial Alta Tecnología</p>
+                        <p>Bogotá D.C.</p>
+                    </div>
+                    <div class="map-hours">
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Sábado</p>
+                        <p>9:30am - 6:30pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
 
         <!-- Content will go here -->
         
@@ -399,6 +430,169 @@ import ModernContactForm from "../components/ModernContactForm.astro";
 
         .social-subtitle {
             font-size: 1rem;
+        }
+    }
+
+    /* Map Section */
+    .map-section {
+        background: #f8fafc;
+        padding: 6rem 0;
+        text-align: center;
+    }
+
+    .map-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 4rem;
+        background: linear-gradient(135deg, #1a202c 0%, #0080ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .map-container {
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e2e8f0;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .map-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, #0080ff 0%, #00a3ff 100%);
+    }
+
+    .map-container iframe {
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2.5rem;
+    }
+
+    .map-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        text-align: left;
+    }
+
+    .map-address,
+    .map-hours {
+        background: #f8fafc;
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+
+    .map-address:hover,
+    .map-hours:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-color: #0080ff;
+    }
+
+    .map-address h3,
+    .map-hours h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .map-address h3::before {
+        content: "📍";
+        font-size: 1.25rem;
+    }
+
+    .map-hours h3::before {
+        content: "🕐";
+        font-size: 1.25rem;
+    }
+
+    .map-address p,
+    .map-hours p {
+        color: #4a5568;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .map-address p:last-child,
+    .map-hours p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Responsive Map Section */
+    @media (max-width: 1024px) {
+        .map-container {
+            padding: 2rem;
+        }
+
+        .map-info {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .map-section {
+            padding: 4rem 0;
+        }
+
+        .map-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .map-container {
+            padding: 1.5rem;
+        }
+
+        .map-container iframe {
+            height: 250px;
+        }
+
+        .map-info {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .map-address,
+        .map-hours {
+            padding: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .map-title {
+            font-size: 2rem;
+        }
+
+        .map-container {
+            padding: 1rem;
+        }
+
+        .map-container iframe {
+            height: 200px;
+        }
+
+        .map-address,
+        .map-hours {
+            padding: 1rem;
         }
     }
 </style>
